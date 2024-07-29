@@ -1,0 +1,215 @@
+/* Cart.css */
+
+.cart {
+    width: 95%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for the cart */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+  
+.cart-items {
+    display: flex;
+    flex-direction: column;
+}
+  
+.cart-items-title {
+    display: grid;
+    grid-template-columns: 2.1fr 2fr 1.1fr 1.2fr 1.1fr 0.9fr; /* Grid layout for cart headers */
+    font-weight: bold;
+    padding: 10px;
+    background-color: #fff; /* White background for headers */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for headers */
+}
+  
+.cart-items-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr; /* Grid layout for cart items */
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #fff; /* White background for cart items */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for cart items */
+}
+  
+.cart-items-item img {
+    width: 100px; /* Fixed width for item images */
+    height: auto;
+    border-radius: 10px;
+}
+  
+.cart-items-item p {
+    margin: 0;
+    padding: 0 10px;
+    text-align: center;
+}
+  
+.cart-items-item p:last-child {
+    cursor: pointer; /* Pointer cursor for remove button */
+    color: red; /* Red color for remove button */
+}
+  
+hr {
+    border: none;
+    border-top: 1px solid #e0e0e0; /* Light border for horizontal rule */
+    margin: 20px 0;
+}
+
+.cart-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin-top: 20px;
+}
+
+.cart-total {
+    width: 60%; /* Adjust width as needed */
+}
+
+.cart-total h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333; /* Dark text color */
+}
+
+.cart-total-details {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 1rem;
+}
+
+.cart-total-details p {
+    margin: 0;
+}
+
+.cart-total-details b {
+    font-weight: bold;
+}
+
+button {
+    background-color: tomato; /* Bright orange for the checkout button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: tomato; /* Slightly darker orange on hover */
+}
+
+.cart-promocode {
+    width: 35%; /* Adjust width as needed */
+    border-left: 1px solid #ddd; /* Divider between cart total and promo code section */
+    padding-left: 20px;
+}
+
+.cart-promocode p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #666; /* Grey color for the promo code text */
+}
+
+.cart-promocode-input {
+    display: flex;
+    align-items: center;
+}
+
+.cart-promocode-input input {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    width: 75%;
+}
+
+.cart-promocode-input button {
+    background-color: tomato; /* Bright orange for the submit button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: -14px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.cart-promocode-input button:hover {
+    background-color: #ff7f29; /* Slightly darker orange on hover */
+}
+
+
+@media (max-width: 1090px) {
+    .cart-items-title,
+    .cart-items-item {
+        grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 1fr; /* Adjust columns for smaller screens */
+    }
+}
+
+@media (max-width: 900px) {
+    .cart-items-title,
+    .cart-items-item {
+        grid-template-columns: 1fr 1fr 1fr 1fr; /* Further adjust columns for smaller screens */
+        grid-template-areas: 
+            "image name price remove"
+            "quantity total . .";
+        grid-template-rows: auto auto;
+    }
+
+    .cart-items-item img {
+        grid-area: image;
+    }
+
+    .cart-items-item p:nth-child(2) {
+        grid-area: name;
+    }
+
+    .cart-items-item p:nth-child(3) {
+        grid-area: price;
+    }
+
+    .cart-items-item p:nth-child(4) {
+        grid-area: quantity;
+    }
+
+    .cart-items-item p:nth-child(5) {
+        grid-area: total;
+    }
+
+    .cart-items-item p:last-child {
+        grid-area: remove;
+    }
+}
+
+@media (max-width: 750px) {
+    .cart-items-title,
+    .cart-items-item {
+        grid-template-columns: 2fr 1.5fr 1.5fr; /* Further adjust columns for smaller screens */
+        grid-template-areas: 
+            "image name price"
+            "quantity total remove";
+        grid-template-rows: auto auto;
+    }
+    .cart-bottom{
+        display: flex;
+        flex-direction: column;
+    }
+    .cart-promocode button{
+        width: 50%;
+    }
+    .cart-promocode input{
+        width: 50%;
+    }
+}

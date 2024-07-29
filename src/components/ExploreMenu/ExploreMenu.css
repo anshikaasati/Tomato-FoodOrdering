@@ -1,0 +1,118 @@
+/* ExploreMenu.css */
+
+#explore-menu {
+  width: 1300px;
+  margin: 20px auto 20px;
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background for elegance */
+  border-radius: 10px; /* Rounded corners for a softer look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.explore-menu h1 {
+  font-size: 2.5rem;
+  color: #333; /* Dark grey for readability */
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: 'Georgia', serif; /* Elegant serif font */
+}
+
+.explore-menu-text {
+  font-size: 1.1rem;
+  padding-top: 10px;
+  color: #666; /* Slightly lighter grey for text */
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Arial', sans-serif; /* Clean sans-serif for body text */
+}
+
+.explore-menu-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.explore-menu-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+  border-radius: 10px; /* Consistent rounded corners */
+  padding: 15px;
+  margin: 10px;
+  background-color: #fff; /* White background for list items */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for list items */
+}
+
+.explore-menu-list-item:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.explore-menu-list-item img {
+  width: 100px; /* Adjust size as needed */
+  height: 100px;
+  border-radius: 50%; /* Rounded corners for images */
+  object-fit: cover; /* Ensure images cover the space */
+  margin-bottom: 10px;
+}
+
+.explore-menu-list-item p {
+  font-size: 1rem;
+  color: #333; /* Dark grey for text */
+  text-align: center;
+  font-family: 'Arial', sans-serif; /* Consistent font for item names */
+}
+
+/* Active state for category */
+.explore-menu-list-item img.active {
+  border: 3px solid tomato; /* Accent border for active category */
+}
+
+/* Media Queries */
+
+/* For screens between 1090px and 1300px */
+@media (max-width: 1090px) {
+  #explore-menu {
+      width: 100%;
+      padding: 20px;
+  }
+}
+
+/* For screens between 900px and 1090px */
+@media (max-width: 900px) {
+  #explore-menu {
+      padding: 20px 10px;
+  }
+  
+  .explore-menu-list {
+      overflow-x: auto; /* Enable horizontal scrolling */
+      white-space: nowrap; /* Prevent wrapping of menu items */
+      flex-wrap: nowrap; /* Prevent wrapping */
+      /* Hide scrollbar for Webkit browsers */
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+  }
+  
+  .explore-menu-list::-webkit-scrollbar {
+      display: none; /* Safari and Chrome */
+  }
+
+  .explore-menu-list-item {
+      display: inline-flex; /* Align items horizontally */
+      margin: 10px 5px; /* Adjust spacing */
+  }
+}
+
+/* For screens between 750px and 900px */
+@media (max-width: 750px) {
+  .explore-menu-list-item img {
+      width: 80px; /* Adjust size for smaller screens */
+      height: 80px;
+  }
+  
+  .explore-menu-list-item p {
+      font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+}

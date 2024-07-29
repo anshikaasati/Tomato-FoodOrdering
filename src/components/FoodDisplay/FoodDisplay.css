@@ -1,0 +1,33 @@
+/* FoodDisplay.css */
+
+.food-display {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.food-display h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: 'Georgia', serif;
+}
+
+.food-display-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  gap: 25px;
+}
+
+@media (max-width: 750px) {
+  .food-display-list{
+    display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  gap: 25px;
+  justify-content: center; /* Centers grid items horizontally */
+  padding: 100px;
+  }
+  
+}
+

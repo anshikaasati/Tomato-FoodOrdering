@@ -1,0 +1,129 @@
+/* PlaceOrder.css */
+
+.place-order {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 20px auto 20px;
+    padding: 20px;
+    background-color: #f4f4f4; /* Light background for the form */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.place-order-left,
+.place-order-right {
+    width: 48%; /* Adjusted width for side-by-side layout */
+}
+
+.place-order-left {
+    background-color: #fff; /* White background for the delivery info section */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for the section */
+}
+
+.place-order-right {
+    background-color: #fff; /* White background for the cart totals section */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for the section */
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.multi-fields {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.multi-fields input {
+    width: 48%; /* Ensure inputs take up half of the container's width */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input {
+    width: 100%; /* Full width for single input fields */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px; /* Space between inputs */
+    font-size: 1rem;
+}
+
+input[type="email"] {
+    /* Additional styling for email input if needed */
+}
+
+.cart-total {
+    font-size: 1rem;
+}
+
+.cart-total h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333; /* Dark text color */
+}
+
+.cart-total-details {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 1rem;
+}
+
+.cart-total-details p {
+    margin: 0;
+}
+
+.cart-total-details b {
+    font-weight: bold;
+}
+
+button {
+    background-color: tomato; /* Bright orange for the button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 20px;
+    width: 100%; /* Full width for the button */
+}
+
+button:hover {
+    background-color: #ff7f29; /* Slightly darker orange on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .place-order {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .place-order-left,
+    .place-order-right {
+        width: 100%;
+        margin-bottom: 20px; /* Space between sections */
+    }
+
+    .multi-fields {
+        flex-direction: column;
+    }
+
+    .multi-fields input {
+        width: 100%;
+        margin-bottom: 10px; /* Space between inputs in multi-fields */
+    }
+}
